@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f7f4" />
+  <meta name="description" content="Submit and follow up on a community concern with the Governance Office." />
+  <title>Community Concerns | Civic Governance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Civic Office home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 13.5 16 6l11 7.5v12a1.5 1.5 0 0 1-1.5 1.5h-19A1.5 1.5 0 0 1 5 25.5z"/><path d="M11 27V16h10v11M3 13.5 16 4l13 9.5"/></svg></span>
+        <span class="brand-copy"><strong>CIVIC</strong><small>GOVERNANCE OFFICE</small></span>
+      </a>
+      <div class="nav-label">YOUR COMMUNITY</div>
+      <nav class="nav-list">
+        <a class="nav-item" href="#home"><span class="nav-icon">⌂</span>Overview</a>
+        <a class="nav-item active" href="#report"><span class="nav-icon">▤</span>Report a concern</a>
+        <a class="nav-item" href="#track"><span class="nav-icon">◷</span>Track a report</a>
+        <a class="nav-item" href="#resources"><span class="nav-icon">▧</span>Community resources</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">✳</span><strong>Here to help</strong><p>Not sure where to start? Our team can point you in the right direction.</p><a href="mailto:governance@example.gov">Contact the office <span>↗</span></a></div>
+        <div class="profile"><div class="avatar">CO</div><div><strong>Community Office</strong><small>Governance sector</small></div><button class="more-button" aria-label="More account options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Community services</span><span class="crumb-divider">/</span><strong>Report a concern</strong></div>
+        <div class="top-actions"><a class="language" href="#" aria-label="Language: English">◎ <span>EN</span></a><button class="icon-button" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i></button><div class="top-avatar">JD</div></div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> GOVERNANCE · COMMUNITY SERVICES</div>
+            <h1>Your voice makes<br class="mobile-break" /> a difference.</h1>
+            <p class="intro">Help us make our community better. Share a concern with the Governance Office and we’ll make sure it reaches the right team.</p>
+          </div>
+          <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="art-building"><span></span><span></span><span></span><b></b></div><div class="art-tree tree-one">✳</div><div class="art-tree tree-two">✳</div><div class="art-person">●<i></i></div></div>
+        </section>
+
+        <section class="stepper" aria-label="Report form progress">
+          <div class="step active"><span class="step-number">1</span><div><strong>Tell us about it</strong><small>Describe your concern</small></div></div>
+          <span class="step-line"></span>
+          <div class="step"><span class="step-number">2</span><div><strong>Your details</strong><small>How to reach you</small></div></div>
+          <span class="step-line"></span>
+          <div class="step"><span class="step-number">3</span><div><strong>Review &amp; submit</strong><small>Check your report</small></div></div>
+        </section>
+
+        <div class="layout-grid">
+          <section class="form-card" id="report">
+            <div class="card-heading"><div><span class="section-kicker">NEW REPORT</span><h2>What’s going on?</h2><p>Tell us a little about the issue so we can connect you with the right people.</p></div><span class="required-note"><b>*</b> Required</span></div>
+            <form id="concern-form" novalidate>
+              <div class="field-group">
+                <label for="category">What is your concern about? <span>*</span></label>
+                <div class="select-wrap"><select id="category" name="category" required><option value="" disabled selected>Select a category</option><option>Roads, sidewalks &amp; street lighting</option><option>Parks &amp; public spaces</option><option>Waste, recycling &amp; cleanliness</option><option>Public safety</option><option>Permits, planning &amp; development</option><option>Community programs &amp; services</option><option>Other governance concern</option></select><span class="select-arrow">⌄</span></div>
+                <span class="field-error" id="category-error"></span>
+              </div>
+              <div class="field-group">
+                <label for="title">Give your concern a short title <span>*</span></label>
+                <input id="title" name="title" type="text" placeholder="e.g. Broken streetlight on Oak Avenue" maxlength="90" required />
+                <div class="field-meta"><span class="field-error" id="title-error"></span><span id="title-count">0 / 90</span></div>
+              </div>
+              <div class="field-group">
+                <label for="description">Describe what happened <span>*</span></label>
+                <textarea id="description" name="description" rows="5" maxlength="1200" placeholder="Share any details that could help us understand and address the concern. Please include when it started and who or what is affected." required></textarea>
+                <div class="field-meta"><span class="field-error" id="description-error"></span><span id="description-count">0 / 1200</span></div>
+              </div>
+              <div class="field-group location-group">
+                <div><label for="location">Where is this happening?</label><p class="field-hint">An address or nearby landmark helps us investigate.</p></div>
+                <div class="input-with-icon"><span aria-hidden="true">⌖</span><input id="location" name="location" type="text" placeholder="Street, area, or landmark (optional)" maxlength="140" /></div>
+              </div>
+              <div class="form-footer"><p><span class="lock-icon">▣</span> Your information is handled with care and in line with our privacy policy.</p><button class="primary-button" type="submit">Continue <span>→</span></button></div>
+            </form>
+          </section>
+
+          <aside class="right-column">
+            <section class="side-card tips-card" id="resources"><div class="tips-heading"><div class="tips-icon">✦</div><div><h3>A few helpful tips</h3><p>A good report helps us act faster.</p></div></div><ul class="tips-list"><li><span>01</span><p><strong>Be specific</strong>Include dates, times, and the exact location if you can.</p></li><li><span>02</span><p><strong>Stick to the facts</strong>Tell us what you saw and how it affects the community.</p></li><li><span>03</span><p><strong>Keep it respectful</strong>We’re here to listen and work together on a solution.</p></li></ul><div class="tip-note">Not for emergencies. If someone is in immediate danger, call your local emergency number.</div></section>
+            <section class="side-card track-card" id="track"><div class="track-top"><div class="track-icon">↗</div><div><h3>Already reported it?</h3><p>Check on the progress of a concern you’ve submitted.</p></div></div><button class="secondary-button" id="track-button" type="button">Track a report <span>→</span></button></section>
+            <section class="side-card examples-card" aria-labelledby="examples-title"><div class="examples-heading"><div><h3 id="examples-title">Sample concerns</h3><p>Fictional reports for this prototype.</p></div><span class="sample-label">DEMO</span></div><ul class="report-example-list" id="report-example-list"></ul></section>
+            <div class="response-note"><span class="clock-icon">◷</span><p><strong>What happens next?</strong><br />Our team reviews each submission and aims to respond within <b>5 business days.</b></p></div>
+          </aside>
+        </div>
+        <footer class="page-footer"><span>© 2025 Civic Governance Office</span><div><a href="#privacy">Privacy</a><a href="#accessibility">Accessibility</a><a href="mailto:governance@example.gov">Get in touch</a></div></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="result-dialog" id="result-dialog" aria-labelledby="result-title"><button class="dialog-close" id="dialog-close" aria-label="Close">×</button><div class="success-mark">✓</div><span class="section-kicker">REPORT RECEIVED</span><h2 id="result-title">Thank you for speaking up.</h2><p>Your concern has been recorded. Keep this reference number to check on its progress.</p><div class="reference-box"><span>YOUR REFERENCE NUMBER</span><strong id="reference-number"></strong><button type="button" id="copy-reference">Copy</button></div><p class="dialog-footnote">A member of our Governance team will review your report. This demo stores submissions in your browser only.</p><button class="primary-button dialog-done" id="dialog-done" type="button">Done</button></dialog>
+  <dialog class="result-dialog track-dialog" id="track-dialog" aria-labelledby="track-title"><button class="dialog-close" id="track-close" aria-label="Close">×</button><div class="track-icon large">↗</div><span class="section-kicker">REPORT STATUS</span><h2 id="track-title">Track a report</h2><p>Enter the reference number you received after submitting a concern.</p><form id="track-form"><label for="reference-input">Reference number</label><input id="reference-input" type="text" placeholder="e.g. BCR-1001" required /><button class="primary-button" type="submit">Check status <span>→</span></button></form><div class="track-result" id="track-result" aria-live="polite"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
